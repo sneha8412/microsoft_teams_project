@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <script src="node_modules/push.js/bin/push.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+ <div id="navbar"><span>Teams Notification Repro Page</span></div>
+  <div id="wrapper">
+
+      <button id="notify-button">Notify Me!</button>
+      <button id="check-button">Check Permission</button>
+      <button id="clear-button">Clear All!</button>
+
+  </div>
+
+  <script>
+    const notifyAll = document.getElementById('notify-button');
+    const checkPermission = document.getElementById('check-button');
+    const clearAll = document.getElementById('clear-button');
+    
+    
+    //-------Notify Button-------------
+    
+    notifyAll.addEventListener('click', function(){
+        Push.create('Transferred by', {
+            body: 'Jane Smith is calling',
+            icon: 'icons/Pikachu-128.png',
+            timeout: 2000,
+            onClick: function() {
+                window.focus();
+                this.close();
+            }
+        });
+    
+    });
+    
+    //--------Check-Permission---------
+    
+    checkPermission.addEventListener('click', function(){
+        console.log(Push.Permission.has());
+    });
+    
+    //--------Clear-All----------------
+    
+    clearAll.addEventListener('click', function(){
+        Push.clear();
+    });
+  </script>
+
+</body>
+</html>

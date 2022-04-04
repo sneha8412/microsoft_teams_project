@@ -1,0 +1,24 @@
+
+
+#wrapper {
+    font-family: Roboto, system-ui, sans-serif;
+    align-items: left;
+    border: 1px solid rgb( 218, 220, 224 );
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: rgb( 26, 115, 232 );
+    cursor: pointer;
+    display: inline-flex;
+    flex-shrink: 0;
+    font-weight: 500;
+    height: 32px;
+    justify-content: center;
+    min-width: 5.14em;
+    outline-width: 0;
+    padding: 8px 16px;
+    position: relative;
+    user-select: none;
+    background: white;
+    margin: 10px 0 5px 10px;
+    padding:3px;
+}
